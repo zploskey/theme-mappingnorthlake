@@ -17396,7 +17396,7 @@ Neatline.on('start', function() {
     var width = $(window).width();
 
     // Fill width with exhibit.
-    exhibit.outerWidth(width);
+    exhibit.outerWidth(width + textWidth);
 
     // Fill height with content.
     exhibit.add(narrative).outerHeight($(window).height());

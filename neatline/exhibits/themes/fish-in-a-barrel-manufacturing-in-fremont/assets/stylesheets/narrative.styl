@@ -1,19 +1,18 @@
 
 /* vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2 cc=80; */
 
-div.narrative
+body.neatline.show div#neatline-narrative
 
   position absolute
-  overflow-y scroll
+  overflow-y auto
   width $text-width
-  padding 0em 2em
   z-index 1
 
   blue-container()
 
   header
-    margin-top 2em
     font-size 12px
+    padding 0
 
   h1
     font-family Oswald
@@ -21,6 +20,7 @@ div.narrative
     font-weight normal
     line-height 1.2em
     margin 0.4em 0
+    color $link-color
 
   [data-neatline-slug]
     background transparent

@@ -21,14 +21,20 @@ body
   font-family "Roboto Condensed"
   font-weight 300
 
-  a, a:visited
+  // take up full space despite what global theme tries to do
+  div#content
 
-    color #0B3C5D
-    font-weight 400
+    padding 0
+    margin 0
+
+body.neatline.show div#neatline-map
+
+  float left
+  width 100%
 
 div.container
 
   padding 0
-  width atuo
+  width auto
   
 
