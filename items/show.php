@@ -1,15 +1,22 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
-    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+
+    <div id="item-images">
+         <?php echo files_for_item(); ?>
+    </div>
+
+    <h1><?php
+    echo metadata('item', array('Dublin Core', 'Title'));
+    $birth_date = metadata('item', array('Item Type Metadata', 'Birth Date'));
+    $death_date = metadata('item', array('Item Type Metadata', 'Death Date'));
+    if ($birth_date || $death_date) {
+        echo ' (' . $birth_date . ' – ' . $death_date . ')';
+    }
+    ?></h1>
 
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
-    </div>
-
-    <h3><?php echo __('Files'); ?></h3>
-    <div id="item-images">
-         <?php echo files_for_item(); ?>
     </div>
 
    <?php if(metadata('item','Collection Name')): ?>
