@@ -1871,27 +1871,6 @@ footer
 	line-height: 100px;
 	margin-top: 0;
 }
-#footer-content p.credits a
-{
-	background: url("../images/powered.png") no-repeat top left;
-	float: right;
-	margin-left: 1px;
-	text-indent: -9999px;
-	width: 108px;
-}
-#footer-content p.credits a.designed
-{
-	background: url("../images/designed.png") no-repeat top left;
-}
-#footer-content p.credits a:hover
-{
-	background-position: bottom;
-}
-#footer-content p.credits
-{
-	float: right;
-	width: auto;
-}
 #custom-footer-text
 {
 	float: left;
@@ -2084,20 +2063,6 @@ a#advanced-search
 	#custom-footer-text p
 	{
 		margin-bottom: 0;
-	}
-	#footer-content p.credits
-	{
-		clear: both;
-		display: block;
-		float: none;
-		height: 100px;
-		text-align: center;
-		width: 100%;
-	}
-	#footer-content p.credits a
-	{
-		display: inline-block;
-		float: none;
 	}
 	footer
 	{
