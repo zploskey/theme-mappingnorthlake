@@ -1311,37 +1311,15 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
   overflow: hidden;
-  margin-top: 1.5em;
-}
-footer:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  footer {
-    width: 768px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  footer {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  footer {
-    width: 420px;
-  }
-}
-footer a {
-  text-decoration: none;
+  background: #1b1a1a;
+	color: #fff;
 }
 footer .navigation {
   font-weight: bold;
+  float: none;
+  text-align: left;
+  margin-bottom: 1.5em;
 }
 footer .navigation li {
   display: inline;
@@ -1358,15 +1336,14 @@ footer .navigation li:last-child:after {
   display: none;
 }
 footer .navigation a {
+  text-decoration: none;
   white-space: nowrap;
 }
 footer nav + p {
   text-align: right;
 }
-
 #footer-text {
-  float: left;
-  width: 48%;
+  text-align: center;
 }
 
 /* @end */
@@ -1686,15 +1663,7 @@ footer nav + p {
   }
 
   /* @end */
-  /* @group ----- Footer ----- */
-  footer .navigation {
-    float: none;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 1.5em;
-  }
 
-  /* @end */
   /* @group ----- Home ----- */
   #home #primary, #home #secondary {
     padding: 0;
@@ -1850,32 +1819,6 @@ h2
 	color: #fff;
 }
 :-ms-input-placeholder
-{
-	color: #fff;
-}
-footer
-{
-	background: #1b1a1a;
-	height: 100px;
-	margin-top: 0;
-	width: 100%;
-}
-#footer-content
-{
-	margin: 0 auto;
-	overflow: hidden;
-	width: 98%;
-}
-#footer-content p
-{
-	line-height: 100px;
-	margin-top: 0;
-}
-#custom-footer-text
-{
-	float: left;
-}
-footer
 {
 	color: #fff;
 }
@@ -2054,25 +1997,6 @@ a#advanced-search
 	#featured-item a.image
 	{
 		max-width: 100px;
-	}
-	#custom-footer-text
-	{
-		float: none;
-		text-align: center;
-	}
-	#custom-footer-text p
-	{
-		margin-bottom: 0;
-	}
-	footer
-	{
-		height: auto;
-		max-width: 100%;
-		width: 100%;
-	}
-	#footer-content
-	{
-		width: 100%;
 	}
 	#mobile-nav
 	{
