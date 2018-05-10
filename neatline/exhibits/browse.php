@@ -24,12 +24,15 @@
     <div class="pagination"><?php echo pagination_links(); ?></div>
 
       <?php foreach (loop('NeatlineExhibit') as $e): ?>
-        <h2>
-          <?php echo nl_getExhibitLink(
-            $e, 'show', nl_getExhibitField('title'),
-            array('class' => 'neatline'), true
-          );?>
-        </h2>
+        <div class="exhibit hentry">
+          <h2>
+            <?php echo nl_getExhibitLink(
+              $e, 'show', nl_getExhibitField('title'),
+              array('class' => 'neatline'), true
+            );?>
+          </h2>
+          <p><?php echo snippet(nl_getExhibitField('narrative'), 0, 300); ?></p>
+        </div>
       <?php endforeach; ?>
 
     <div class="pagination"><?php echo pagination_links(); ?></div>
