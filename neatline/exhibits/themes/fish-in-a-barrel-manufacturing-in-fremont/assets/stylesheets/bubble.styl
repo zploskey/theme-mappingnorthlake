@@ -3,12 +3,15 @@
 
 #static-bubble
 
-  right 20px
-  left auto
-  font-family Oswald
-  opacity 1
+  position absolute
+  left unset
+  width 400px
+  right 420px
 
-  blue-container();
+div.bubble.static
+
+  opacity 1
+  font-family Oswald
 
   &.selected
     opacity 1
@@ -16,7 +19,7 @@
   a.close
 
     text-shadow none
-    color $link-color
+    color $bg-color
     font-size 3em
     font-weight 200
     line-height 0
