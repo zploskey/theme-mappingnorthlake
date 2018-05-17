@@ -7,17 +7,18 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
 
-?>
+$title = __('Browse Maps');
 
-<?php echo head(array(
-  'title' => __('Neatline | Browse Exhibits'),
+echo head(array(
+  'title' => $title,
   'content_class' => 'neatline'
-)); ?>
+));
+?>
 
 <div id="primary">
 
   <?php echo flash(); ?>
-  <h1><?php echo __('Neatline | Browse Exhibits'); ?></h1>
+  <h1><?php echo $title; ?></h1>
 
   <?php if (nl_exhibitsHaveBeenCreated()): ?>
 
