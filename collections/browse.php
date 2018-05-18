@@ -6,14 +6,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 <h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 <?php echo pagination_links(); ?>
 
-<?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Date Added')] = 'added';
-?>
-<div id="sort-links">
-    <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
-</div>
-
 <?php foreach (loop('collections') as $collection): ?>
 
 <div class="collection">
