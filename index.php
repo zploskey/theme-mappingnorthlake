@@ -1,8 +1,9 @@
-<?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
+<?php echo head(array('bodyid' => 'home', 'bodyclass' => 'two-col')); ?>
+
 <div id="primary">
 <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
     <div id="homepage-text"><p><?php echo $homepageText; ?></p></div>
-    <?php endif; ?>
+<?php endif; ?>
     <?php
     $recentItems = get_theme_option('Homepage Recent Items');
     if ($recentItems === null || $recentItems === ''):
@@ -18,21 +19,21 @@
         <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
     </div><!--end recent-items -->
     <?php endif; ?>
-    
+
     <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 
 </div><!-- end primary -->
 
 <div id="secondary">
-	<div id="search-container">
-		<h2>Search</h2>
-		<?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-		<?php echo search_form(array('show_advanced' => true)); ?>
-		<?php else: ?>
-		<?php echo search_form(); ?>
-		<?php endif; ?>
-	</div>
-    
+    <div id="search-container">
+        <h2>Search</h2>
+        <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+        <?php echo search_form(array('show_advanced' => true)); ?>
+        <?php else: ?>
+        <?php echo search_form(); ?>
+        <?php endif; ?>
+    </div>
+
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
     <div id="featured-item">
