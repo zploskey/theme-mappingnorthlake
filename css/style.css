@@ -1720,7 +1720,7 @@ a:hover
 {
 	background: #121111 url("../images/bg-search.png") no-repeat right 10px top;
 }
-.view-items-link, #search-container input[type=text]:focus
+#search-container input[type=text]:focus
 {
 	background-color: #0B3C5D;
 	border-color: #0B3C5D;
