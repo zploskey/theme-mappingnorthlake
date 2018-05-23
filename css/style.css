@@ -577,7 +577,6 @@ header:after {
 /* @group ----- Home Page ----- */
 #home #primary {
   float: left;
-  float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
@@ -1561,10 +1560,7 @@ footer nav + p {
   /* @end */
   /* @group ----- Global selectors ----- */
   #search-container {
-    clear: both;
     width: 100%;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
   }
 
   /* @end */
@@ -1782,7 +1778,7 @@ h2
 }
 #content
 {
-	padding: 50px 0;
+	padding: 1em 0;
 }
 #featured-item
 {
@@ -1895,10 +1891,6 @@ div#header-image-holder .held
 h2
 {
 	text-transform: uppercase;
-}
-#homepage-text
-{
-	margin-top: -18px;
 }
 #header-image-holder
 {
@@ -2015,4 +2007,55 @@ a#advanced-search
 	{
 		background-image: none;
 	}
+}
+
+#tiles {
+  list-style: none;
+  padding: 0;
+}
+
+#tiles li:nth-child(odd) {
+  float: left;
+  border-right: 1px solid white;
+}
+
+#tiles li:nth-child(even) {
+  float: right;
+}
+
+#tiles li {
+  display: block;
+  width: 50%;
+  height: 13.5em;
+  border-top: 1px solid white;
+  background-color: lightgray;
+  padding: 1em;
+}
+
+#tiles p {
+  padding: 1em;
+}
+
+#tiles li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  line-height: 24px;
+  text-shadow: rgb(51, 51, 51) 0px 1px 20px
+}
+
+#tiles #maps {
+  background: center url(../../../files/theme_uploads/d9404bb37b6f97af8d2540bcab5ad891.jpg);
+  background-size: cover;
+}
+
+#tiles #people {
+  background: center url(../../../files/original/c9436df9899518886809f7cbc6f17979.jpeg);
+  background-size: cover;
+}
+
+#tiles #exhibits {
+  background: center url(../../../files/original/fd7209051470e348a11635fc972ca93a.jpg);
+  background-size: cover;
 }
