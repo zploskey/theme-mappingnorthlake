@@ -12,7 +12,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 24px;
   color: black;
@@ -489,6 +495,7 @@ header:after {
 /* @end */
 /* @group ----- Global selectors ----- */
 #content {
+  flex: 1 0 auto;
   overflow: hidden;
   border: 1px solid #ccc;
   position: relative;
@@ -1221,6 +1228,8 @@ ul.title-list {
 /* @end */
 /* @group ----- Footer ----- */
 footer {
+  flex-shrink: 0;
+  width: 100%;
   clear: both;
   position: relative;
   margin: 0 auto;
