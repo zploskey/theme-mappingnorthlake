@@ -10,13 +10,14 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 
 <div class="collection">
 
-    <h2><?php echo link_to_collection(); ?></h2>
 
-    <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
+    <?php if ($collectionImage = record_image('collection')): ?>
         <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
     <?php endif; ?>
 
     <div class="collection-meta">
+
+    <h2><?php echo link_to_collection(); ?></h2>
 
     <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
     <div class="collection-description">

@@ -534,6 +534,7 @@ header:after {
   clear: both;
   visibility: hidden;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #content {
     width: 768px;
@@ -1127,81 +1128,38 @@ ul.title-list {
   margin-top: 0.75em;
 }
 
+.browse .collection,
+.browse .exhibit {
+  height: auto;
+  overflow: hidden;
+  clear: both;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5em;
+}
+
 .browse .collection h2,
 .browse .exhibit h2 {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  margin-left: 0;
   margin: 0;
-  max-width: 100%;
-}
-@media only screen and (max-width: 767px) {
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: 172px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .browse .collection h2,
-  .browse .exhibit h2 {
-    width: 420px;
-  }
 }
 
 .browse .collection .image,
 .browse .exhibit .image {
-  margin-right: 0;
-  float: right;
+  float: left;
+  margin-right: 1em;
   text-align: right;
   height: 10.5em;
 }
+
 .browse .collection .image img,
 .browse .exhibit .image img {
   height: 100%;
   width: auto;
 }
 
-.collection-meta {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 520px;
-}
-@media only screen and (max-width: 767px) {
-  .collection-meta {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .collection-meta {
-    width: 412px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .collection-meta {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .collection-meta {
-    width: 420px;
-  }
+.collection-meta,
+.exhibit-meta {
+  min-width: 200px;
+  overflow: hidden;
 }
 
 .collection-description p:first-of-type,
@@ -1337,12 +1295,6 @@ footer nav + p {
 
 /* @end */
 /* @group ----- Exhibit Builder ----- */
-.browse .exhibit {
-  clear: both;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1.5em;
-  overflow: auto;
-}
 
 .pagination + .exhibit {
   border-top: 1px solid #eee;
@@ -1504,32 +1456,10 @@ footer nav + p {
 }
 
 .exhibit .description {
-  float: left;
-  display: inline;
   margin-left: 10px;
   margin-right: 10px;
-  width: 520px;
 }
-@media only screen and (max-width: 767px) {
-  .exhibit .description {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .exhibit .description {
-    width: 412px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .exhibit .description {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .exhibit .description {
-    width: 420px;
-  }
-}
+
 .exhibit .description p:first-of-type {
   margin-top: 0.75em;
 }
