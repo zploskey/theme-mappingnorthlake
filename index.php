@@ -1,15 +1,18 @@
 <?php echo head(array('bodyid' => 'home', 'bodyclass' => 'two-col')); ?>
 
+<?php if ($homepage_text = get_theme_option('Homepage Text')): ?>
+<div id="homepage-text"><p><?php echo $homepage_text; ?></p></div>
+<?php endif; ?>
+
+<div id="search-container">
+    <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+    <?php echo search_form(array('show_advanced' => true)); ?>
+    <?php else: ?>
+    <?php echo search_form(); ?>
+    <?php endif; ?>
+</div>
+
 <ul id="tiles">
-    <li id="homepage-text"><p><?php echo get_theme_option('Homepage Text'); ?></p></li>
-    <li id="search-container">
-        <h2>Search</h2>
-        <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-        <?php echo search_form(array('show_advanced' => true)); ?>
-        <?php else: ?>
-        <?php echo search_form(); ?>
-        <?php endif; ?>
-    </li>
     <li id="maps"><a href="<?php echo html_escape(url('neatline')); ?>">Maps</a></li>
     <li id="exhibits"><a href="<?php echo html_escape(url('exhibits')); ?>">Exhibits</a></li>
     <li id="people"><a href="<?php echo html_escape(url('collections/show/20')); ?>">People</a></li>
