@@ -1276,15 +1276,12 @@ footer nav + p {
     width: 420px;
   }
 }
-.exhibits.summary #exhibit-pages a {
-  text-decoration: none;
-}
 .exhibits.summary #exhibit-pages > ul {
   margin-left: 0;
   border-top-width: 0.08333em;
   border-top-style: solid;
   padding-top: 1.41667em;
-  border-color: #eee;
+  border-color: #7A9D96;
   padding-left: 0;
   list-style-type: none;
 }
@@ -1292,7 +1289,7 @@ footer nav + p {
   border-bottom-width: 0.08333em;
   border-bottom-style: solid;
   padding-bottom: 1.41667em;
-  border-color: #eee;
+  border-color: #7A9D96;
   margin-bottom: 1.5em;
 }
 .exhibits.summary #exhibit-pages ul li > ul {
