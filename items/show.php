@@ -1,10 +1,6 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
 
-    <div id="item-images">
-         <?php echo files_for_item(); ?>
-    </div>
-
     <h1><?php
     echo metadata('item', array('Dublin Core', 'Title'));
     $birth_date = metadata('item', array('Item Type Metadata', 'Birth Date'));
@@ -14,12 +10,16 @@
     }
     ?></h1>
 
+    <div id="item-images">
+         <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
+    </div>
+
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
     </div>
 
-   <?php if(metadata('item','Collection Name')): ?>
+   <?php if (metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
         <h3><?php echo __('Collection'); ?></h3>
         <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>

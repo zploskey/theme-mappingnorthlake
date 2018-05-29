@@ -667,6 +667,7 @@ header:after {
   width: 960px;
   padding: 1.5em 10px;
 }
+
 .items #content:after {
   content: "\0020";
   display: block;
@@ -674,6 +675,24 @@ header:after {
   clear: both;
   visibility: hidden;
 }
+
+#item-images img {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+  #item-images {
+    float: left;
+    width: 38%;
+  }
+  #item-metadata {
+    float: right;
+    width: 62%;
+    padding-left: 10px;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .items #content {
     width: 768px;
@@ -739,18 +758,8 @@ ul.title-list {
   font-style: italic;
 }
 
-#item-images {
-  overflow: hidden;
-  margin-bottom: 18px;
-  margin-right: -10px;
-}
-
 .fullsize {
   margin-right: 10px;
-}
-
-#item-image img {
-  width: 100%;
 }
 
 .items.show h3 {
@@ -797,15 +806,6 @@ ul.title-list {
 .item .tags {
   clear: left;
   margin-left: 216px;
-}
-
-.item-file a {
-  display: block;
-  height: 9em;
-}
-.item-file a img {
-  height: 100%;
-  width: auto;
 }
 
 .item h2 {
