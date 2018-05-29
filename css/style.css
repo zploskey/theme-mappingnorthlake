@@ -496,17 +496,29 @@ header:after {
 
 /* @end */
 /* @group ----- Global selectors ----- */
+
+#content:before
+{
+  background: #1D2731;
+  content: ' ';
+  height: 5px;
+  left: -2000px;
+  position: absolute;
+  top: -10px;
+  width: 5000px;
+  z-index: 9999;
+}
+
 #content {
   flex: 1 0 auto;
   overflow: hidden;
-  border: 1px solid #ccc;
   position: relative;
   margin: 0 auto;
-  padding: 0;
   width: 94%;
-  padding: 1.5em 10px;
   z-index: 0;
+  padding: 1em 0;
 }
+
 #content:after {
   content: "\0020";
   display: block;
@@ -1607,10 +1619,6 @@ h2
 {
   margin-top: 0;
 }
-#content
-{
-  padding: 1em 0;
-}
 #featured-item
 {
   background: #1D2731;
@@ -1641,10 +1649,6 @@ h2
 :-ms-input-placeholder
 {
   color: #fff;
-}
-#content
-{
-  border: none;
 }
 #home #primary
 {
@@ -1727,21 +1731,6 @@ div#header-image-holder .held
 #home #header-image-holder
 {
   display: block;
-}
-#content:before
-{
-  background: #1D2731;
-  content: ' ';
-  height: 5px;
-  left: -2000px;
-  position: absolute;
-  top: -10px;
-  width: 5000px;
-  z-index: 9999;
-}
-#content
-{
-  overflow: visible;
 }
 html, body
 {
