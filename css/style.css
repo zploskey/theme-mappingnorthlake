@@ -1138,6 +1138,7 @@ ul.title-list {
 
 .collection-description p:first-of-type,
 .view-items-link {
+  display: block;
   margin-top: 0.75em;
 }
 
@@ -1171,10 +1172,15 @@ ul.title-list {
   margin-top: 1.5em;
 }
 
-#collection-items {
-  column-count: 2;
-  column-width: 46%;
-  column-gap: 48px;
+@media only screen and (min-width: 767px) {
+  .collections .element-set {
+    width: 38%;
+    float: left;
+  }
+  .collections #collection-items {
+    width: 62%;
+    float: right;
+  }
 }
 
 /* @end */
