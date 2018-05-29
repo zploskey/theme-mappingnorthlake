@@ -1,10 +1,6 @@
 @import url(normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
 
-/* ==========================================================================
-   Styling kept from Berlin v2.2
-   ========================================================================== */
-   
 /* @group ----- Generic ----- */
 * {
   -moz-box-sizing: border-box;
@@ -568,64 +564,20 @@ header:after {
 
 /* @end */
 /* @group ----- Home Page ----- */
-#home #primary {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 48%;
-  margin-left: 0;
-  margin-right: 0;
-  padding-right: 10px;
+
+#home #content {
+  max-width: 960px;
+  min-width: 300px;
 }
-@media only screen and (max-width: 767px) {
-  #home #primary {
-    margin: 0;
-  }
-}
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  #home #primary {
-    width: 364px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #home #primary {
-    width: 300px;
+  #home #content {
+    width: 720px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  #home #primary {
-    width: 420px;
-  }
-}
-#home #secondary {
-  float: right;
-  float: right;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 48%;
-  margin-right: 0;
-  padding-left: 10px;
-}
-@media only screen and (max-width: 767px) {
-  #home #secondary {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  #home #secondary {
-    width: 364px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #home #secondary {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  #home #secondary {
-    width: 420px;
+  #home #content {
+    width: 440px;
   }
 }
 
@@ -1570,17 +1522,6 @@ footer nav + p {
 
   /* @end */
 
-  /* @group ----- Home ----- */
-  #home #primary, #home #secondary {
-    padding: 0;
-    max-width: 100%;
-  }
-
-  #home #primary > div:last-of-type {
-    border-bottom: 1px solid #ccc;
-  }
-
-  /* @end */
   /* @group ----- Items/Browse ----- */
   .browse .item img {
     max-width: 50%;
@@ -1603,13 +1544,13 @@ footer nav + p {
    New style rules for Avantgarde
    ========================================================================== */
 
-#featured-collection 
+#featured-collection
 {
   background: url(../../../files/original/c9436df9899518886809f7cbc6f17979.jpeg);
   margin-bottom: 24px;
   padding: 20px;
 }
-#featured-exhibit 
+#featured-exhibit
 {
   background: url(../../../files/original/fd7209051470e348a11635fc972ca93a.jpg);
   margin-bottom: 24px;
@@ -1630,45 +1571,21 @@ h2
 {
   color: #fff;
 }
-#secondary #featured-collection:last-child, #secondary #featured-exhibit:last-child
+#featured-collection:last-child, #featured-exhibit:last-child
 {
   margin-bottom: 0;
 }
-::-webkit-input-placeholder
-{
-  color: #fff;
-}
-:-moz-placeholder
-{
-  color: #fff;
-}
-::-moz-placeholder
-{
-  color: #fff;
-}
-:-ms-input-placeholder
-{
-  color: #fff;
-}
-#home #primary
-{
-  padding-right: 0;
-  width: 48%;
-}
-#home #secondary
-{
-  width: 48%;
-}
+
 #primary-nav .navigation > li:last-child a
 {
   padding-right: 0;
 }
 div#header-image-holder
 {
-    float: left;
-    clear: both;
+  float: left;
+  clear: both;
   max-height: 350px;
-    width: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -1732,10 +1649,6 @@ div#header-image-holder .held
 {
   display: block;
 }
-html, body
-{
-  overflow-x: hidden;
-}
 .browse #content
 {
   margin: 0 auto;
@@ -1767,6 +1680,9 @@ a#advanced-search
 {
   top: 140px;
 }
+
+/* front page content */
+
 #home #content:before
 {
   display: none;
@@ -1776,19 +1692,6 @@ a#advanced-search
   div#header-image-holder p
   {
     max-width: 80%;
-  }
-  #home #primary, #home #secondary
-  {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  #home #secondary
-  {
-    display: block;
-    margin: 0;
-    padding: 0;
-    padding-top: 50px;
   }
   #featured-item img
   {
@@ -1821,8 +1724,6 @@ a#advanced-search
     max-width: 100%;
   }
 }
-
-/* front page content */
 
 #tiles {
   list-style: none;

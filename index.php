@@ -1,4 +1,4 @@
-<?php echo head(array('bodyid' => 'home', 'bodyclass' => 'two-col')); ?>
+<?php echo head(array('bodyid' => 'home')); ?>
 
 <?php if ($homepage_text = get_theme_option('Homepage Text')): ?>
 <div id="homepage-text"><p><?php echo $homepage_text; ?></p></div>
