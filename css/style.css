@@ -139,10 +139,12 @@ a {
 }
 
 a:link, a:visited {
+  text-decoration: none;
   color: #00303F;
 }
 
 a:hover, a:active {
+  text-decoration: none;
   color: #7A9D96;
 }
 
