@@ -154,7 +154,9 @@ header {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 96%;
+  width: 100%;
+  max-width: 960px;
+  min-width: 300px;
   padding: 3em 0;
   position: relative;
   clear: both;
@@ -166,19 +168,16 @@ header:after {
   clear: both;
   visibility: hidden;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   header {
-    width: 768px;
+    width: 720px;
   }
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   header {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  header {
-    width: 420px;
+    width: 440px;
   }
 }
 
@@ -186,22 +185,17 @@ header:after {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
+  max-width: 960px;
+  min-width: 300px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #header-image {
-    width: 768px;
+    width: 720px;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  #header-image {
-    width: 300px;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   #header-image {
     width: 420px;
   }
@@ -353,22 +347,6 @@ header:after {
   z-index: 50;
   float: right;
   width: auto;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  #primary-nav {
-    width: 768px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #primary-nav {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  #primary-nav {
-    width: 420px;
-  }
 }
 
 #primary-nav a
@@ -575,7 +553,7 @@ header:after {
     width: 720px;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   #home #content {
     width: 440px;
   }
