@@ -11,35 +11,35 @@ $title = __('Browse Maps');
 
 echo head(array(
   'title' => $title,
-  'content_class' => 'neatline'
+  'bodyclass' => 'neatline exhibits browse'
 ));
 ?>
 
-<div id="primary">
+<?php echo flash(); ?>
 
-  <?php echo flash(); ?>
-  <h1><?php echo $title; ?></h1>
+<h1><?php echo $title; ?></h1>
 
-  <?php if (nl_exhibitsHaveBeenCreated()): ?>
+<?php if (nl_exhibitsHaveBeenCreated()): ?>
 
-    <div class="pagination"><?php echo pagination_links(); ?></div>
+  <div class="pagination"><?php echo pagination_links(); ?></div>
 
-      <?php foreach (loop('NeatlineExhibit') as $e): ?>
-        <div class="exhibit hentry">
+    <?php foreach (loop('NeatlineExhibit') as $i => $e): ?>
+      <?php $file = $this->files[$i]; ?>
+      <div class="exhibit">
+        <?php if (isset($file->id)): ?>
+          <?php echo nl_getExhibitLink($e, 'show', file_image('square_thumbnail', array(), $file), array('class' => 'image'), true); ?>
+        <?php endif; ?>
+        <div class="exhibit-meta">
           <h2>
-            <?php echo nl_getExhibitLink(
-              $e, 'show', nl_getExhibitField('title'),
-              array('class' => 'neatline'), true
-            );?>
+            <?php echo nl_getExhibitLink($e, 'show', nl_getExhibitField('title'), array(), true); ?>
           </h2>
           <p><?php echo snippet(nl_getExhibitField('narrative'), 0, 300); ?></p>
         </div>
-      <?php endforeach; ?>
+      </div>
+    <?php endforeach; ?>
 
-    <div class="pagination"><?php echo pagination_links(); ?></div>
+  <div class="pagination"><?php echo pagination_links(); ?></div>
 
-  <?php endif; ?>
-
-</div>
+<?php endif; ?>
 
 <?php echo foot(); ?>
