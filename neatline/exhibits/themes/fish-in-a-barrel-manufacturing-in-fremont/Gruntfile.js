@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       },
       options: {
         paths: ['bower_components'],
-        'include css': true
+        compress: false
       }
     },
 
@@ -61,6 +61,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('compile', ['stylus', 'concat']);
   grunt.registerTask('compile:min', ['compile', 'cssmin', 'uglify']);
-  grunt.registerTask('default', 'compile:min');
+  grunt.registerTask('default', 'compile');
 
 };
