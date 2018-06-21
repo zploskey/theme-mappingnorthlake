@@ -24,6 +24,7 @@ body {
 body div#content {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 body.neatline.show div#neatline-map {
   width: 100%;
