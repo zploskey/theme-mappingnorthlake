@@ -9,12 +9,9 @@
 
   <header>
 
-    <!-- Credits. -->
-    <span><a href="<?php echo WEB_ROOT; ?>">&larr; View all</a></span> &bull;
-    <span>By <a href="https://twitter.com">@yourhandle</a></span>,
-    <span>with <a href="http://omeka.org">Omeka</a></span>
-    <span>and <a href="http://neatline.org">Neatline</a></span>
-
+    <!-- Credits, REMOVED!. -->
+    
+		
   </header>
 
   <!-- Content. -->

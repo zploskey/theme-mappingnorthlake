@@ -5,7 +5,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -30,18 +29,6 @@ module.exports = function(grunt) {
       }
     },
 
-    stylus: {
-      dist: {
-        files: {
-          'style.css': 'assets/stylesheets/style.styl'
-        }
-      },
-      options: {
-        paths: ['bower_components'],
-        'include css': true
-      }
-    },
-
     cssmin: {
       dist: {
         files: {
@@ -59,8 +46,8 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('compile', ['stylus', 'concat']);
+  grunt.registerTask('compile', ['concat']);
   grunt.registerTask('compile:min', ['compile', 'cssmin', 'uglify']);
-  grunt.registerTask('default', 'compile:min');
+  grunt.registerTask('default', 'compile');
 
 };
